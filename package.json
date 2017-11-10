@@ -19,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/twlamb/secret-santa/issues"
   },
-  "homepage": "https://github.com/twlamb/secret-santa#readme"
+  "homepage": "https://github.com/twlamb/secret-santa#readme",
+  "devDependencies": {
+    "@types/node": "^8.0.51",
+    "typescript": "^2.6.1"
+  },
+  "dependencies": {
+    "gmail-send": "^1.2.11",
+    "remarkable": "^1.7.1"
+  }
 }
