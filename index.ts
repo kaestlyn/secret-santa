@@ -13,7 +13,7 @@ class Startup {
         let res = ss.assign();
 
         ss.notifyOwner();
-        // ss.notifyMembers();
+        ss.notifyMembers();
 
         return 0;
     }
@@ -26,7 +26,7 @@ class SecretSanta {
 `
 # List of Assignments
 
-| Person | Assigned To | Address |
+| Secret Santa | Assigned | Assignee Address |
 | --- | --- | --- |
 `;
 
@@ -95,7 +95,7 @@ class SecretSanta {
             send({
                 "to": m.email,
                 "subject": "Secret Santa - Your Assignment!",
-                "html": md.render(`Dear ${m.name}:\n\nYou've been assigned **${m.secret.name}**.\n\nTheir address is:\n\n${m.secret.address}\n\nThanks!\n\nSanta Clause`)
+                "html": md.render(`Dear ${m.name}:\n\nYou've been assigned **${m.secret.name}**.\n\nTheir address is:\n\n${m.secret.address}\n\nThanks!\n\nSanta Claus`)
             }, (err,res) => {
                 console.log( "Err: " + err );
                 console.log( "Res: " + res );
